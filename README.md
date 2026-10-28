@@ -22,3 +22,10 @@ Binary heaps merge in O(n) time because you must rebuild. Leftist heaps add a si
 `merge` moves all elements from the argument heap into the target and leaves the argument empty — it does not copy. If you need to preserve the source, construct a second heap and merge that instead.
 
 All keys must be mutually comparable with `<`. The heap has no notion of an explicit capacity.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
