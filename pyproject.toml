@@ -1,6 +1,6 @@
 [project]
 name = "leftist-heap-kit"
-version = "0.1.0"
+version = "0.1.1"
 description = "A pure-Python min-priority queue implementation using leftist heaps with O(log n) merge"
 requires-python = ">=3.10"
 dependencies = []
